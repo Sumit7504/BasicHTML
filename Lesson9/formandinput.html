@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <article>
+            <form action="http://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>Personal Info</legend>
+
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Sumit" autocomplete="on" required autofocus>
+                    </div>
+
+                    <div>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Sahu" autocomplete="on" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" placeholder="Your secret" autocomplete="on" required>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="2222221123" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                    </div>
+
+                    <div>
+                        <label for="decade">Favorite Decade:</label>
+                        <input type="number" name="decade" id="decade" min="1950" max="2024" step="10" value="1980">
+                    </div>
+
+                    <p>
+                        <label for="coffee">Choose your coffee:</label>
+                        <select name="coffee" id="coffee" multiple size="2">
+                            <optgroup label="Coffees">
+                                <option value="regular">Regular Coffee</option>
+                                <option value="ice coffee">Iced Coffee</option>
+                                <option value="latte">Latte</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>What is your favorite food?</legend>
+
+                    <p>
+                        <input type="radio" name="food" id="tacos" value="tacos">
+                        <label for="tacos">Tacos</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="food" id="pizza" value="pizza">
+                        <label for="pizza">Pizza</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="food" id="maggi" value="maggi">
+                        <label for="maggi">Maggi</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Do you have pets?</legend>
+
+                    <p>
+                        <input type="checkbox" name="pets" id="dog" value="dog">
+                        <label for="dog">Dog</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="pets" id="cat" value="cat">
+                        <label for="cat">Cat</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="pets" id="fish" value="fish">
+                        <label for="fish">Fish</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Send me a note</legend>
+
+                    <label for="message">Your message:</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Write a message"></textarea>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit (GET)</button>
+                <button type="reset">Reset</button>
+                <button type="submit" formaction="http://httpbin.org/post">Submit (POST)</button>
+            </form>
+        </article>
+    </main>
+</body>
+</html>
